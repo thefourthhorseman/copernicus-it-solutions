@@ -1,0 +1,9 @@
+{
+  "name": "Copernicus IT Solutions",
+  "short_name": "Copernicus IT",
+  "icons": [{ "src": "/assets/img/logo.png", "sizes": "512x512", "type": "image/png" }],
+  "theme_color": "#0B1020",
+  "background_color": "#0B1020",
+  "display": "browser",
+  "start_url": "/"
+}

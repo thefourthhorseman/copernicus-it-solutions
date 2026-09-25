@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /404.html
+Disallow: /-5/
+
+Sitemap: https://copernicus-it.solutions/sitemap.xml
