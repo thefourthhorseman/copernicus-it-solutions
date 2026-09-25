@@ -109,3 +109,14 @@ Headshots are 640x640 JPEGs displayed at 112px. The OG image is a single 1200x63
 
 **Removed**
 - Cookie consent banner (no cookies are set), "Join Our Mailing List" blocks, reCAPTCHA notice text, embedded map / "Get directions", the Florida phone number. Copyright is now `© 2017–2026`.
+
+## Deploying on Heroku
+
+The repo also contains a dependency-free Node server (`server.js`, `Procfile`, `package.json`) so the same static files can run on Heroku. It serves clean directory URLs, the 404 page, and 301-redirects the old `/-5` page to `/advisory/`. Deploy with:
+
+```
+heroku git:remote -a copernicus-it-solutions
+git push heroku main
+```
+
+GitHub Pages ignores these files, so both hosting options work from the same repo.
