@@ -186,6 +186,22 @@
               "name": "Travel & Airline IT",
               "url": "https://copernicus-it.solutions/travel-airline-it/"
             }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Legacy System Modernization Assessment",
+              "url": "https://copernicus-it.solutions/solutions/legacy-system-modernization/"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "AI & Business Process Automation Assessment",
+              "url": "https://copernicus-it.solutions/solutions/ai-business-process-automation/"
+            }
           }
         ]
       }
@@ -327,6 +343,14 @@
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/services/">Services</a></li>
+        <li class="has-sub">
+          <a href="/solutions/">Solutions</a>
+          <button class="sub-toggle" type="button" aria-expanded="false" aria-controls="sub-solutions" aria-label="Solutions submenu"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6l4 4 4-4"/></svg></button>
+          <ul class="sub-menu" id="sub-solutions">
+            <li><a href="/solutions/legacy-system-modernization/">Legacy System Modernization</a></li>
+            <li><a href="/solutions/ai-business-process-automation/">AI &amp; Business Process Automation</a></li>
+          </ul>
+        </li>
         <li><a href="/advisory/">Advisory</a></li>
         <li><a href="/travel-airline-it/">Travel &amp; Airline IT</a></li>
         <li><a href="/about/">About</a></li>
@@ -351,6 +375,7 @@
   <div class="wrap contact-grid">
     <div class="form-card">
       <h2 id="send-message">Send us a message</h2>
+      <p class="topic-note" id="topic-note" hidden>You are requesting a <strong>20-Minute Technology Opportunity Review</strong>. Tell us a little about the situation and we will propose times within one business day.</p>
       <!--
         FORM ENDPOINT — ACTION REQUIRED BEFORE LAUNCH
         Replace REPLACE_WITH_FORM_ID below with your Formspree form ID (https://formspree.io → New form → copy the ID).
@@ -379,6 +404,7 @@
           <label for="_gotcha">Leave this field empty</label>
           <input id="_gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
         </div>
+        <input type="hidden" name="topic" value="">
         <input type="hidden" name="_subject" value="Website enquiry — copernicus-it.solutions">
         <button class="btn btn-primary" type="submit">Send message</button>
         <p class="form-note">We use your details only to reply to you. No newsletter, no tracking.</p>
@@ -437,6 +463,8 @@
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/services/">Services</a></li>
+          <li><a href="/solutions/legacy-system-modernization/">Legacy System Modernization</a></li>
+          <li><a href="/solutions/ai-business-process-automation/">AI &amp; Business Process Automation</a></li>
           <li><a href="/advisory/">Advisory</a></li>
           <li><a href="/travel-airline-it/">Travel &amp; Airline IT</a></li>
           <li><a href="/about/">About</a></li>

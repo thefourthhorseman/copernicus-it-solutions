@@ -10,12 +10,15 @@ index.html                  Home
 services/index.html         Services (anchors #strategy #design #program #build #devops)
 advisory/index.html         Advisory for CIOs and technology leaders (replaces old /-5)
 travel-airline-it/index.html
+solutions/index.html        Solutions hub: the two fixed-price assessments
+solutions/legacy-system-modernization/index.html     Legacy System Modernization Assessment
+solutions/ai-business-process-automation/index.html  AI & Business Process Automation Assessment
 about/index.html
-contact/index.html          Form + direct contacts
+contact/index.html          Form + direct contacts (?topic=legacy-modernization | process-automation | opportunity-review pre-labels a 20-minute review request)
 404.html                    GitHub Pages not-found page (noindex)
 -5/index.html               Meta-refresh redirect of the old GoDaddy /-5 URL to /advisory/ (noindex, canonical → /advisory/)
 assets/css/site.css         The one stylesheet
-assets/js/site.js           Mobile nav toggle + contact-form handling
+assets/js/site.js           Mobile nav toggle, Solutions submenu, contact-form handling
 assets/img/                 logo.png (512 square, apple-touch-icon), logo-wordmark.png (cropped, header/footer),
                             og-image.png (1200x630 share image), renaud-arnoux-prost.jpg, christophe-griva.jpg
 favicon.svg, favicon.ico    Icons
@@ -84,7 +87,7 @@ Any other form service that accepts a plain HTML POST (Basin, Web3Forms, …) wo
 
 ## Editing content
 
-Pages are hand-written HTML. Header and footer are repeated in each file; when you change them, change all seven files (six pages + `404.html`).
+Pages are hand-written HTML. Header and footer are repeated in each file; when you change them, change all ten files (nine pages + `404.html`).
 Headshots are 640x640 JPEGs displayed at 112px. The OG image is a single 1200x630 PNG used on every page.
 
 ## Changelog vs the old GoDaddy site
