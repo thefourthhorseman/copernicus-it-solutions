@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://copernicus-it.solutions/</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://copernicus-it.solutions/services/</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://copernicus-it.solutions/solutions/</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://copernicus-it.solutions/solutions/legacy-system-modernization/</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://copernicus-it.solutions/solutions/ai-business-process-automation/</loc><lastmod>2026-10-12</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://copernicus-it.solutions/travel-airline-it/</loc><lastmod>2026-09-24</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://copernicus-it.solutions/advisory/</loc><lastmod>2026-09-24</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://copernicus-it.solutions/about/</loc><lastmod>2026-09-24</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://copernicus-it.solutions/contact/</loc><lastmod>2026-09-24</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://copernicus-it.solutions/</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://copernicus-it.solutions/services/</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://copernicus-it.solutions/solutions/</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://copernicus-it.solutions/solutions/legacy-system-modernization/</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://copernicus-it.solutions/solutions/ai-business-process-automation/</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://copernicus-it.solutions/travel-airline-it/</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://copernicus-it.solutions/advisory/</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://copernicus-it.solutions/about/</loc><lastmod>2026-10-15</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://copernicus-it.solutions/contact/</loc><lastmod>2026-10-15</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://copernicus-it.solutions/solutions/enterprise-architecture-technology-strategy/</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://copernicus-it.solutions/solutions/engineering-transformation-delivery/</loc><lastmod>2026-10-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>

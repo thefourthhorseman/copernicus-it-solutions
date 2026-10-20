@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "description": "Copernicus IT Solutions website (static site with a minimal Node server for Heroku)",
-  "scripts": { "start": "node server.js" },
+  "scripts": { "start": "node server.js", "dev": "DEV=1 node server.js" },
   "engines": { "node": "22.x" }
 }

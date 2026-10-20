@@ -10,11 +10,13 @@ index.html                  Home
 services/index.html         Services (anchors #strategy #design #program #build #devops)
 advisory/index.html         Advisory for CIOs and technology leaders (replaces old /-5)
 travel-airline-it/index.html
-solutions/index.html        Solutions hub: the two fixed-price assessments
+solutions/index.html        Technology Transformation hub: four capabilities and two assessment entry points
 solutions/legacy-system-modernization/index.html     Legacy System Modernization Assessment
-solutions/ai-business-process-automation/index.html  AI & Business Process Automation Assessment
+solutions/ai-business-process-automation/index.html  AI Business Process Automation Assessment
+solutions/enterprise-architecture-technology-strategy/index.html  Enterprise Architecture & Technology Strategy
+solutions/engineering-transformation-delivery/index.html         Engineering & Transformation Delivery
 about/index.html
-contact/index.html          Form + direct contacts (?topic=legacy-modernization | process-automation | opportunity-review pre-labels a 20-minute review request)
+contact/index.html          Form + direct contacts (?topic=legacy-modernization | process-automation | opportunity-review pre-labels a 30-minute review request; architecture-strategy, engineering, leadership, and travel are also supported)
 404.html                    GitHub Pages not-found page (noindex)
 -5/index.html               Meta-refresh redirect of the old GoDaddy /-5 URL to /advisory/ (noindex, canonical → /advisory/)
 assets/css/site.css         The one stylesheet
@@ -87,14 +89,17 @@ Any other form service that accepts a plain HTML POST (Basin, Web3Forms, …) wo
 
 ## Editing content
 
-Pages are hand-written HTML. Header and footer are repeated in each file; when you change them, change all ten files (nine pages + `404.html`).
+Pages are hand-written HTML. Header and footer are repeated in each file; when you change them, change all pages, including the two new solution routes and `404.html`.
 Headshots are 640x640 JPEGs displayed at 112px. The OG image is a single 1200x630 PNG used on every page.
 
 ## Changelog vs the old GoDaddy site
 
 **Positioning**
-- One story instead of three: "We advise, then we build." The near-shore team, the solo-advisor page and the two-person leadership page are now framed as two doors (Advisory / Near-shore engineering) into the same firm.
-- Copy rewritten in first-person plural, executive tone; hype, emoji, all-caps slogans and typos removed. One experience claim (30 years / since 2014 / founded 2017).
+- A technology transformation partner with two distinct pillars: Technology Transformation and Travel & Airline IT.
+- Four transformation capabilities: legacy modernization; AI and business process automation; enterprise architecture and technology strategy; engineering and transformation delivery.
+- Two existing fixed-price assessments remain concrete entry points, with implementation scoped separately.
+- Present company accountability from diagnosis through production. Do not describe delivery staffing, sourcing, or resource assembly.
+- Preserve domain-specific experience and distinguish prior leadership roles from Copernicus engagements.
 
 **Pages**
 - New: `/advisory/` (absorbs and rewrites the unlisted `/-5` page) and `/travel-airline-it/` (dedicated industry page).

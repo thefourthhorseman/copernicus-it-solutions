@@ -7,6 +7,7 @@ const path = require('path');
 
 const ROOT = __dirname;
 const PORT = process.env.PORT || 3000;
+const DEV = !!process.env.DEV; // `npm run dev`: no browser caching, so edits show on refresh
 const TYPES = {
   '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8',
   '.js': 'text/javascript; charset=utf-8', '.json': 'application/json',
@@ -21,7 +22,7 @@ function send(res, status, file, extra = {}) {
   const ext = path.extname(file).toLowerCase();
   const headers = Object.assign({
     'Content-Type': TYPES[ext] || 'application/octet-stream',
-    'Cache-Control': ext === '.html' ? 'public, max-age=300' : 'public, max-age=86400',
+    'Cache-Control': DEV ? 'no-store' : ext === '.html' ? 'public, max-age=300' : 'public, max-age=86400',
     'X-Content-Type-Options': 'nosniff',
     'Referrer-Policy': 'strict-origin-when-cross-origin'
   }, extra);
