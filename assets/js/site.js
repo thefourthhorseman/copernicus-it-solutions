@@ -138,7 +138,7 @@
   var panel = document.getElementById("form-panel");
   var status = document.getElementById("form-status");
   var submitBtn = form.querySelector('button[type="submit"]');
-  var MAILTO_ADDRESS = "rarnoux-prost@copernicus-it.solutions";
+  var MAILTO_ADDRESS = "info@copernicus-it.solutions";
   var currentTopic = DEFAULT_TOPIC;
 
   function each(selector, fn) { Array.prototype.forEach.call(document.querySelectorAll(selector), fn); }

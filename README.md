@@ -76,10 +76,10 @@ Remove the old GoDaddy Website Builder A/CNAME records first. GitHub then redire
 
 The form in `contact/index.html` posts to `https://formspree.io/f/REPLACE_WITH_FORM_ID`.
 
-1. Create a free form at https://formspree.io (recipient `rarnoux-prost@copernicus-it.solutions`), copy the form ID (looks like `xabcdefg`).
+1. Create a free form at https://formspree.io (recipient `info@copernicus-it.solutions`), copy the form ID (looks like `xabcdefg`).
 2. In `contact/index.html`, replace `REPLACE_WITH_FORM_ID` in the `<form action="...">` attribute (there is a comment right above it).
 3. Nothing else changes. `assets/js/site.js` looks at the action at submit time:
-   - placeholder still present → it opens a pre-filled `mailto:` link to `rarnoux-prost@copernicus-it.solutions` instead;
+   - placeholder still present → it opens a pre-filled `mailto:` link to `info@copernicus-it.solutions` instead;
    - real ID → it POSTs via `fetch` and shows the inline success message; if the POST fails it falls back to the `mailto:` link;
    - JavaScript disabled → the browser submits the plain POST to Formspree.
 
