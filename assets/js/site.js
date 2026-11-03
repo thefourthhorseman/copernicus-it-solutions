@@ -1,10 +1,27 @@
 /* Copernicus IT Solutions — minimal vanilla JS
+   0. Homepage video play button
    1. Mobile navigation toggle and "Solutions" submenu, homepage mission cards
    2. Contact page: two ways to start (call / inquiry), topic carried over from ?topic=, meeting details per topic,
       optional Calendly scheduling, time-zone detection, validation, then POST to the form service, or fall back
       to a pre-filled mailto: link when the endpoint is still the placeholder (or the POST fails).        */
 (function () {
   "use strict";
+
+  /* 0. Homepage video: show a clean poster with one play button; native controls appear once it plays.
+        Without JS the <video> keeps its native controls. */
+  var heroVideo = document.querySelector(".hero-video video");
+  var heroPlay = document.querySelector(".hero-video-play");
+  if (heroVideo && heroPlay) {
+    heroVideo.controls = false;
+    heroPlay.hidden = false;
+    heroPlay.addEventListener("click", function () {
+      heroPlay.hidden = true;
+      heroVideo.controls = true;
+      var started = heroVideo.play();
+      if (started && started.catch) { started.catch(function () {}); }
+      heroVideo.focus();
+    });
+  }
 
   /* 1. Mobile navigation ------------------------------------------------- */
   var toggle = document.querySelector(".nav-toggle");

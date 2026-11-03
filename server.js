@@ -11,14 +11,14 @@ const DEV = !!process.env.DEV; // `npm run dev`: no browser caching, so edits sh
 const TYPES = {
   '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8',
   '.js': 'text/javascript; charset=utf-8', '.json': 'application/json',
-  '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg',
+  '.png': 'image/png', '.mp4': 'video/mp4', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg',
   '.svg': 'image/svg+xml', '.ico': 'image/x-icon', '.webmanifest': 'application/manifest+json',
   '.xml': 'application/xml; charset=utf-8', '.txt': 'text/plain; charset=utf-8', '.md': 'text/markdown; charset=utf-8'
 };
 const REDIRECTS = { '/-5': '/advisory/', '/-5/': '/advisory/' };
 const HIDDEN = [/^\/docs(\/|$)/, /^\/server\.js$/, /^\/package\.json$/, /^\/Procfile$/, /^\/README\.md$/, /^\/\.git/];
 
-function send(res, status, file, extra = {}) {
+function send(res, status, file, extra = {}, range) {
   const ext = path.extname(file).toLowerCase();
   const headers = Object.assign({
     'Content-Type': TYPES[ext] || 'application/octet-stream',
@@ -27,7 +27,18 @@ function send(res, status, file, extra = {}) {
     'Referrer-Policy': 'strict-origin-when-cross-origin'
   }, extra);
   res.writeHead(status, headers);
-  fs.createReadStream(file).pipe(res);
+  fs.createReadStream(file, range).pipe(res);
+}
+
+// Byte-range support so browsers (Safari/iOS in particular) can stream and seek video.
+function sendFile(req, res, file, size) {
+  const m = /^bytes=(\d*)-(\d*)$/.exec(req.headers.range || '');
+  if (!m || (!m[1] && !m[2])) return send(res, 200, file, { 'Accept-Ranges': 'bytes', 'Content-Length': size });
+  let start = m[1] ? parseInt(m[1], 10) : size - parseInt(m[2], 10);
+  let end = m[1] && m[2] ? Math.min(parseInt(m[2], 10), size - 1) : size - 1;
+  if (start < 0) start = 0;
+  if (start >= size || start > end) { res.writeHead(416, { 'Content-Range': `bytes */${size}` }); return res.end(); }
+  send(res, 206, file, { 'Accept-Ranges': 'bytes', 'Content-Range': `bytes ${start}-${end}/${size}`, 'Content-Length': end - start + 1 }, { start, end });
 }
 
 http.createServer((req, res) => {
@@ -46,9 +57,9 @@ http.createServer((req, res) => {
       if (!urlPath.endsWith('/')) { res.writeHead(301, { Location: urlPath + '/' }); return res.end(); }
       file = path.join(file, 'index.html');
     }
-    fs.access(file, fs.constants.R_OK, (e) => {
-      if (e) return send(res, 404, path.join(ROOT, '404.html'));
-      send(res, 200, file);
+    fs.stat(file, (e, fst) => {
+      if (e || !fst.isFile()) return send(res, 404, path.join(ROOT, '404.html'));
+      sendFile(req, res, file, fst.size);
     });
   });
 }).listen(PORT, () => console.log(`Serving on port ${PORT}`));
