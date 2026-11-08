@@ -231,6 +231,8 @@ strong { font-weight: 600; }
 /* Client badges */
 .badges { list-style: none; padding: 0; margin: 1.5rem 0 0; display: flex; flex-wrap: wrap; gap: 0.6rem; }
 .badges li { margin: 0; padding: 0.45rem 0.95rem; border: 1px solid var(--line); border-radius: 999px; background: #fff; font-weight: 600; font-size: 0.9375rem; color: var(--ink-2); }
+.badges-label { margin: 1.5rem 0 0; }
+.badges-label + .badges { margin-top: 0.6rem; }
 
 /* Fit list */
 .fit-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; }

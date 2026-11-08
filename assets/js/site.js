@@ -100,8 +100,8 @@
   // One name, one duration and one next step per inquiry type. Keys match ?topic= links across the site.
   var DEFAULT_TOPIC = {
     name: "30-minute introductory call",
-    outcome: "A candid read on your situation and a recommended next step, whether or not it involves us.",
-    next: "A short written note within a few days: scope, approach, delivery milestones, and indicative budget.",
+    outcome: "An initial discussion of your priorities and a recommended next step.",
+    next: "A short written note within a few days: scope, approach, delivery milestones, and estimated budget range.",
     prompt: "What are you trying to deliver, and what is in the way?"
   };
   var TOPICS = {
@@ -113,14 +113,14 @@
     },
     "legacy-modernization": {
       name: "30-minute Legacy System Risk Review",
-      outcome: "A first read on the risk and the opportunity in one system, and whether a full assessment is worth it.",
+      outcome: "An initial discussion of technology risks, business opportunities, and appropriate next steps.",
       next: "A fixed-price Legacy System Modernization Assessment: about 2 weeks, from $12,500, scope and price agreed before we start.",
       prompt: "Which system is holding you back, what does it run, and what is at stake if it fails or cannot change?"
     },
     "process-automation": {
       name: "30-minute Automation Opportunity Review",
-      outcome: "A first read on where automation would pay off, and whether a full assessment is worth it.",
-      next: "A fixed-price AI Business Process Automation Assessment: from $7,500, ending with a defined pilot.",
+      outcome: "An initial discussion of automation opportunities and whether a detailed assessment is appropriate.",
+      next: "A fixed-price AI Business Process Automation Assessment: from $7,500, including a scoped pilot plan; implementation is priced separately.",
       prompt: "Which process costs you the most time, which tools does it touch, and how many people work on it?"
     },
     "opportunity-review": {
@@ -138,14 +138,14 @@
     "engineering": {
       name: "30-minute introductory call",
       outcome: DEFAULT_TOPIC.outcome,
-      next: "A short written note within a few days: delivery scope, technical approach, milestones, and indicative budget.",
+      next: "A short written note within a few days: delivery scope, technical approach, milestones, and estimated budget range.",
       prompt: "What needs to be built, integrated, modernized, or migrated, and what must be true before it goes into production?"
     },
     "travel": {
       name: "30-minute introductory call",
       outcome: DEFAULT_TOPIC.outcome,
       next: DEFAULT_TOPIC.next,
-      prompt: "Which platform or program is it (PSS, NDC, Altea, GDS, TPF...), and what is at stake?"
+      prompt: "Which airline or travel platform are you changing, and what business outcomes or operational risks are driving the project?"
     }
   };
 
@@ -235,7 +235,7 @@
 
   if (CALENDLY_URL) {
     each('[data-label="call"]', function (el) { el.textContent = "Choose a meeting time"; });
-    each('[data-label="call-desc"]', function (el) { el.textContent = "30-minute Zoom call with Renaud Arnoux-Prost. Pick a slot in your time zone."; });
+    each('[data-label="call-desc"]', function (el) { el.textContent = "30-minute Zoom call with Renaud Arnoux-Prost. Choose a meeting time in your time zone."; });
   }
 
   function applyMode() {
@@ -330,8 +330,8 @@
 
   function fallbackToMailto() {
     window.location.href = mailtoLink();
-    showStatus("Your email client should now open with your message pre-filled. If it does not, write to " +
-      MAILTO_ADDRESS + " directly.", "success");
+    showStatus("Your message has not been sent yet. Send it from the email draft that opens, or email " +
+      MAILTO_ADDRESS + " directly.", "error");
   }
 
   form.addEventListener("submit", function (e) {

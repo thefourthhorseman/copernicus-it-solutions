@@ -1,2 +1,6 @@
 docs/source-assets/
 .env
+
+# Local audit inputs and Windows download metadata
+Copernicus-Content-Audit.csv
+*:Zone.Identifier
